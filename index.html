@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Курс по Javascript</title>
+		<title>Курс по Javascript</title>		
+		<link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
 		<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -33,7 +34,7 @@
 					<img id="img_3" src="images/moto3.jpg" width="200" height="125" alt="Мотоцикл 3" />
 					<img id="img_4" src="images/moto1.jpg" width="200" height="125" alt="Мотоцикл 4" /> 
 				</div>
-				<p><strong>На данный момент к прокату доступны следующие модели:</strong></p>
+	<p><strong>На данный момент к прокату доступны следующие модели:</strong></p>
 				<!-- Ненумерованный список -->
 				<ol id="moto_models">
 					<li>Харлей Дэвидсон</li>
@@ -41,28 +42,31 @@
 					<li>Гоночный мотоцикл</li>
 					<li>Концептуальный мотоцикл</li>
 				</ol>
-				<h3 id="my_h3"><span class="pq">Ссылки на сайты производителей</span> и спецификации мотоциклов:</h3>
+<h3 id="my_h3"><span class="pq">Ссылки на сайты производителей</span> и спецификации мотоциклов:</h3>
 				<ul id="my_links">
-					<li><a href="http://www.yamaha-motor.ru" target="_blank" id="superlink">Yamaha Motors Russia</a></li>
-					<li><a href="documents/yamaha_fz6.PDF">Спецификация на мотоцикл Yamaha FZ6</a></li>
+	<li><a href="http://www.yamaha-motor.ru" target="_blank" id="superlink">Yamaha Motors Russia</a></li>
+	<li><a href="documents/yamaha_fz6.PDF">Спецификация на мотоцикл Yamaha FZ6</a></li>
 				</ul>
 				<h3>Рассчет стоимости проката мотоциклов:</h3>
 				<!-- Форма -->
-				<form action="form.php" id="my_form">
+				<form action="form.php" id="my_form method="get">
 					<div id="bigform">
 						<fieldset>
 							<!-- Правый блок формы -->
 							<div id="div_form_1">
-								<fieldset id="innerfieldset">
-									<legend>Дополнительные опции</legend>
-									<p><strong>Нужны ли аксессуары?</strong></p>
-									<div id="format">
+		<fieldset id="innerfieldset">
+		<legend>Дополнительные опции</legend>
+		<p><strong>Нужны ли аксессуары?</strong></p>
+		<div id="format">
 										<input type="checkbox" value="sh" name="dop_oprions" id="shlem" />
 										<label for="shlem">Шлем</label>
 										<input type="checkbox" value="bag" name="dop_oprions" id="bag" />
 										<label for="bag">Багажник</label>
 										<input type="checkbox" value="od" name="dop_oprions" id="od" />
 										<label for="od">Мото-одежда</label>
+		<!--<input type="range" name="points" min="1" max="10">-->
+		<!--First name:<input type="text" name="fname" autofocus>-->
+		<!--html 5 	Birthday: <input type="date" name="bday">-->
 									</div>
 									<p><strong>Нужна ли страховка?</strong></p>
 									<div id="radio">
@@ -89,7 +93,17 @@
 									<option value="2">2</option>
 								</select>
 								<p><strong>Укажите Ваш email:</strong></p>
-								<input type="text" id="email" value="Пример: you@site.ru" /> 
+<input type="email" id="email" placeholder="Пример: you@site.ru" >
+
+
+	<p><strong>Укажите дату: </strong></p>
+<input type="text" name="date" id="datepicker">
+	
+	<p>
+<label for="amount">Price range:</label>
+<input type="text" id="amount"  name="price" style="border:none; background: #e7e7f0;" disabled>
+</p>
+<div id="slider-range"></div>
 								<p><strong>Ваши пожелания:</strong></p>
 								<textarea cols="45" rows="2" id="mytextarea"></textarea>
 							</div>
@@ -126,6 +140,8 @@
 			<!-- Конец футера -->
 		</div>
 		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/scripts_ui.js"></script>
 	</body>
 </html>
